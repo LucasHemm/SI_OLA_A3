@@ -2,13 +2,14 @@
 - [Table of Contents](#table-of-contents)
   - [Event Storming](#event-storming)
   - [Ubiquitous Language](#ubiquitous-language)
-  - [Bounded Contexts](#bounded-contexts)
+  - [Bounded Context](#bounded-context)
+  - [System diagram with bounded contexts](#system-diagram-with-bounded-contexts)
   - [Aggregates](#aggregates)
 
 ---
 
 ## Event Storming
-Billedet herunder er af vores digitale event storming board. Vi brugte event storming sammen i gruppen til at danne os et overblik over funktionaliteten i systemet, og finde vores domain events.
+Billedet herunder er af vores digitale event storming board. Vi brugte event storming sammen i gruppen til at danne os et overblik over funktionaliteten i systemet, og finde vores domain events. Der kan og er oftest flere aggregates til hvert domain event, dem som står ved et domain event er dem som er core aggretates til det event.
 Farverne er inddelt efter kategorier:
 - <span style="color:orange">Orange</span> - Domain event
 - <span style="color:blue">Blå</span> - Commands
@@ -16,7 +17,7 @@ Farverne er inddelt efter kategorier:
 - <span style="color:#FFC300">Gul</span> - Aggregate
 - <span style="color:pink">Pink</span> - External system
 
-![alt text](image.png)
+![alt text](image-2.png)
 
 
 
@@ -83,12 +84,21 @@ Farverne er inddelt efter kategorier:
 
 ---
 
-## Bounded Contexts
+## Bounded Context
 
+- Rental Management: Handling trailer reservations, rental periods, rental agreements, and trailer statuses.
+- Trailer Inventory: Managing the trailers, their locations, availability, and movement.
+- Payments and Fees: Processing payments, insurance, and applying late fees.
+- App: The graphical user interface (GUI) for customers to search, book, and return trailers.
+---
 
+## System diagram with bounded contexts
+This diagram shows the high-level architecture of the MyTrailer app, with the different bounded contexts. Each bounded context represents a specific subdomain within the system, such as Customer Management, Trailer Inventory, App and Payments & Fees.
+![alt text](image-1.png)
 
 ---
 
 ## Aggregates
-Aggregates are a cluster of domain objects that can be treated as a single unit for data changes. An aggregate has a root entity, known as the aggregate root, which controls the consistency and lifecycle of the whole cluster.
+This a diagram of the aggregates we have found in our system. These are also visible in the event storming board.
+![alt text](image-3.png)
 
