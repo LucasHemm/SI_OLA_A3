@@ -11,7 +11,8 @@
 ## Event Storming
 Billedet herunder er af vores digitale event storming board. Vi brugte event storming sammen i gruppen til at danne os et overblik over funktionaliteten i systemet, og finde vores domain events. Der kan og er oftest flere aggregates til hvert domain event, dem som står ved et domain event er dem som er core aggretates til det event.
 Farverne er inddelt efter kategorier:
-- <code style="color:orange">Orange</code> - Domain event
+- $${\color{orange}Orange}$$
+- <code style="color : orange">Orange</code> - Domain event
 - <span style="color:blue">Blå</span> - Commands
 - <span style="color:teal">Tyrkis</span> - Actor
 - <span style="color:#FFC300">Gul</span> - Aggregate
